@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+#boton3{ 
+	 background:-moz-linear-gradient(#fff 0%,#DEDEDE 100%);
+	 background:-ms-linear-gradient(#fff 0%,#DEDEDE 100%); 
+	 background:-o-linear-gradient(#fff 0%,#DEDEDE 100%); 
+	 background:-webkit-linear-gradient(#fff 0%,#DEDEDE 100%);
+	 background:linear-gradient(#fff 0%,#DEDEDE 100%);
+	 border:solid 1px #DEDEDE;
+	 border-radius:5px;
+	 text-align:center;
+	 padding:5px;
+	 color:#f90; 
+	 width:75px; 
+	 transition:all 2s;
+	 -moz-transition:all 2s;
+	 -ms-transition:all 2s; 
+	 -o-transition:all 2s;
+	 -webkit-transition:all 2s;
+ }
+ #boton3:hover{ 
+	 background:-moz-linear-gradient(#f90 0%,#F63 100%);
+	 background:-ms-linear-gradient(#f90 0%,#F63 100%);
+	 background:-o-linear-gradient(#f90 0%,#F63 100%);
+	 background:-webkit-linear-gradient(#f90 0%,#F63 100%);
+	 background:linear-gradient(#f90 0%,#F63 100%);
+	   color:#fff;
+	 padding:8px; 
+	 width:100px;
+	 font-size:18px; 
+	 text-shadow:0 0 10px #FFF;
+ } 
+ 
+ 
+#textbox1{
+  border: 1px solid #DBE1EB;
+  font-size: 12px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA); 
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA); 
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA); 
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);  
+  color: #2E3133;
+}
+#textbox1:hover{
+  color: #2E3133;
+  border-color: #FBFFAD; 
+} 
+
+#BODY {
+	background-color: #06C;
+	background-image: url(../image/75273400_1368481288.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	background-size: 100%;
+
+	P {font-size: 24pt;
+}
+
+#input{
+    font-size:18px;
+    font-family: Arial, helvetica;
+    outline:none;
+    transition: all 0.75s ease-in-out;
+    -webkit-transition: all 0.75s ease-in-out;
+    -moz-transition: all 0.75s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+    color:gray;
+    background-color:#eee;
+    padding: 3px;
+}
+ 
+#input:focus {
+    box-shadow: 0 0 10px #aaa;
+    -webkit-box-shadow: 0 0 10px #aaa;
+    -moz-box-shadow: 0 0 10px #aaa;
+    border:1px solid #999;
+    background-color:white;
+}
+.contenedor{
+	display:block;
+	padding-top:50px;
+	width:600px;
+	margin:0 auto;
+}
+
