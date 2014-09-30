@@ -36,6 +36,7 @@
 				transition: all 0.4s;
 				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 			}
+			
 			select:hover{
 				background-color: #ddd;
 			}
@@ -49,8 +50,36 @@
 				background-size: 100%;
 				P {font-size: 24pt;
 			}
+			
 		</style>
-        <script type="text/javascript" src="js/TitleBlink.js"></script>
+	</head>
+	<body id="BODY">	
+		<section>
+			<article>
+			<div id="contenedorf1">
+				<form id="f1"  name="f1" method="post" action="login.php"  style="opacity:0.8">
+					<h2>Ingreso al Sistema</h2>
+					<hr id="ray"><br>
+					<input type="hidden" name="valor" value="0" id="valor">
+					<input type='text' name="user" placeholder="Usuario"><br><br>
+					<input type="password" name="pass" placeholder="Contraseña"><br><br>
+                   <select name="sucursal"  id="sucursal" onchange="Npos()">
+                   		<?php
+							 require_once('/mod_sucursales/sucursales.php');
+							 ListarSucursales();
+						 ?>
+                    <select/><img></img><br><br>
+                    <p>
+					<input type="button" name="Ingresar" value="Ingresar"" onclick="cambiaTitulo();"><br><br>
+                    <a href="">Recuperar Contraseña</a>
+					</p>
+                    <div class="button">
+			        	<a>Almacenes de Depósitos S.A.</a>
+		            </div>
+				</form>
+			</div>
+			</article>
+		</section>
         <script language="Javascript" type="text/javascript">
 			var conta=1
 			document.oncontextmenu=function(){
@@ -64,39 +93,10 @@
 				document.f1.submit();
 			}
 			function cambiaTitulo(){
-				
-				document.title="ALDESA HN ("+conta+")";
+				document.title="("+conta+") ALDESA HN";
 				conta++;
 			}
 		</script>
-	</head>
-	<body id="BODY">	
-		<section>
-			<article>
-			<div id="contenedorf1">
-				<form id="f1"  name="f1" method="post" action="login.php"  style="opacity:0.8">
-					<h2>Ingreso al Sistema</h2>
-					<hr id="ray"><br>
-					<input type="hidden" name="valor" value="0" id="valor">
-					<input type='text' name="user" placeholder="Usuario"><br><br>
-					<input type="password" name="pass" placeholder="Contraseña"><br><br>
-                   <select name="sucursal"  id="sucursal" onchange="Npos()">
-                   		<option>ADMINISTRADOR</option>
-                        <option>SAN PEDRO SULA</option>
-                        <option>TEGUCIGALPA</option>
-                        <option>PUERTO CORTES</option>
-                    <select/><br><br>
-                    <p>
-					<input type="button" name="Ingresar" value="Ingresar"" onclick="cambiaTitulo();"><br><br>
-                    <a href="">Recuperar Contraseña</a>
-					</p>
-                    <div class="button">
-			        	<a>Almacenes de Depósitos S.A.</a>
-		            </div>
-				</form>
-			</div>
-			</article>
-		</section>
 	</body>
 </html>
 
