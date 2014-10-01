@@ -85,14 +85,21 @@
 			document.oncontextmenu=function(){
 				return false
 			}
+            
 			function Npos(){
 				document.getElementById("valor").value=document.getElementById("sucursal").selectedIndex;;
 			}
+            
 			function Ingresar(){
 				document.f1.action="login.php";
 				document.f1.submit();
 			}
-			function cambiaTitulo(){
+            
+            
+            function validarUsuario(){
+			}
+			
+            function cambiaTitulo(){
 				document.title="("+conta+") ALDESA HN";
 				conta++;
 			}
