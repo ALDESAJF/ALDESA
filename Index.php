@@ -52,6 +52,7 @@
 			}
 			
 		</style>
+         <script type="text/javascript" src="js/ajax.js"></script>
 	</head>
 	<body id="BODY">	
 		<section>
@@ -60,17 +61,18 @@
 				<form id="f1"  name="f1" method="post" action="login.php"  style="opacity:0.8">
 					<h2>Ingreso al Sistema</h2>
 					<hr id="ray"><br>
-					<input type="hidden" name="valor" value="0" id="valor">
-					<input type='text' name="user" placeholder="Usuario"><br><br>
-					<input type="password" name="pass" placeholder="Contraseña"><br><br>
-                   <select name="sucursal"  id="sucursal" onchange="Npos()">
-                   		<?php
-							 require_once('/mod_sucursales/sucursales.php');
-							 ListarSucursales();
-						 ?>
-                    <select/><img></img><br><br>
+                    <div id="cuerpo" style="color:#F00"></div>
+					<input type="text" name="user" id="user" placeholder="Usuario" onBlur="recibe(1);"><br><br>
+					<input type="password" name="pass" placeholder="Contraseña" onBlur="recibe(2);"><br><br>
+                    <select name="sucursal"  id="sucursal" onchange="Npos()">
+                   	<?php
+						 require_once('/mod_sucursales/sucursales.php');
+						 ListarSucursales();
+					 ?>
+                    <select/>
                     <p>
-					<input type="button" name="Ingresar" value="Ingresar"" onclick="cambiaTitulo();"><br><br>
+                    <br>
+					<input type="button" name="Ingresar" value="Ingresar" onclick="cambiaTitulo();"><br>
                     <a href="">Recuperar Contraseña</a>
 					</p>
                     <div class="button">
@@ -82,12 +84,9 @@
 		</section>
         <script language="Javascript" type="text/javascript">
 			var conta=1
-			document.oncontextmenu=function(){
-				return false
-			}
-            
-			function Npos(){
-				document.getElementById("valor").value=document.getElementById("sucursal").selectedIndex;;
+			
+            document.oncontextmenu=function(){
+				return false;
 			}
             
 			function Ingresar(){
@@ -95,14 +94,11 @@
 				document.f1.submit();
 			}
             
-            
-            function validarUsuario(){
-			}
-			
             function cambiaTitulo(){
 				document.title="("+conta+") ALDESA HN";
 				conta++;
 			}
+            
 		</script>
 	</body>
 </html>
