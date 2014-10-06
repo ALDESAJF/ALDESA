@@ -62,8 +62,8 @@
 					<h2>Ingreso al Sistema</h2>
 					<hr id="ray"><br>
                     <div id="cuerpo" style="color:#F00"></div>
-					<input type="text" name="user" id="user" placeholder="Usuario" onBlur="recibe(1);"><br><br>
-					<input type="password" name="pass" placeholder="Contraseña" onBlur="recibe(2);"><br><br>
+					<input type="text" name="user" id="user" placeholder="Usuario"><br><br>
+					<input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
                     <select name="sucursal"  id="sucursal" onchange="Npos()">
                    	<?php
 						 require_once('/mod_sucursales/sucursales.php');
@@ -72,7 +72,7 @@
                     <select/>
                     <p>
                     <br>
-					<input type="button" name="Ingresar" value="Ingresar" onclick="cambiaTitulo();"><br>
+					<input type="button" name="Ingresar" value="Ingresar" onclick="recibe();"><br>
                     <a href="">Recuperar Contraseña</a>
 					</p>
                     <div class="button">
