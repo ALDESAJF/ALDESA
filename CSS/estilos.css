@@ -61,13 +61,13 @@ font-family: Helvetica, Arial, sans-serif;
 
 }
 input[type=text]{
-	background: url(usuario.png) no-repeat;
+	background: url(../image/usuario.png) no-repeat;
 	background-size: 30px;  
 	background-position: inherit;
 	
 }
 input[type=password]{
-	background: url(contrasena.png) no-repeat;
+	background: url(../image/contrasena.png) no-repeat;
 	background-size: 30px;  
 
 }

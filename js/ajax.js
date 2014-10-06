@@ -16,10 +16,12 @@ function metodoAjax(datos, ruta){ //METODO AJAX QUE RECIBE 2 PARAMETROS, LOS DAT
 	load(datos, ruta, function(){ 
 		if (xmlhttp.readyState==4 && xmlhttp.status==200){
 			document.getElementById("cuerpo").innerHTML=xmlhttp.responseText; //MOSTRAMOS LOS DATOS EN EL DIV CON ID CUERPO
-			if(xmlhttp.responseText=="Correcto"){
-				alert("Bienvenido(a) al Sistema");
-				window.location="administrador.php"
-				
+			if(xmlhttp.responseText=="Cargando Configuración inicial"){
+				document.getElementById("cuerpo").className="exito";
+				window.location="administrador.php";
+			}
+			if(xmlhttp.responseText=="Usuarios y/o Contraseña Incorrecto"){
+				document.getElementById("cuerpo").className="error";
 			}
 		}
 	}

@@ -15,7 +15,7 @@ if(isset($_POST['valor'])){
 		$existepsw=true;
 	}
 	if($existeusr && $existepsw){
-		echo 'Correcto';
+		echo 'Cargando Configuración inicial';
 	}else{
 		echo 'Usuarios y/o Contraseña Incorrecto';
 	}
