@@ -1,5 +1,4 @@
 <?php
-	$con;
 	function conectar(){
 		$servidor='localhost';
 		$user='root';
@@ -7,8 +6,5 @@
 		$name='contabilidad';
 		$con=@mysql_connect($servidor,$user,$pass);
 		@mysql_select_db($name,$con);
-	}
-	function cerrar(){
-		$con.close;
 	}
 ?>

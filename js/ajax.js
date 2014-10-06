@@ -5,7 +5,6 @@ function load(str, url, cfunc){
 	}else{
 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	
 	xmlhttp.onreadystatechange=cfunc;
 	xmlhttp.open("POST",url,true); // AQUÍ LE DECIMOS QUE VAMOS A ENVIAR LOS DATOS POR POST
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -16,18 +15,12 @@ function metodoAjax(datos, ruta){ //METODO AJAX QUE RECIBE 2 PARAMETROS, LOS DAT
 	load(datos, ruta, function(){ 
 		if (xmlhttp.readyState==4 && xmlhttp.status==200){
 			document.getElementById("cuerpo").innerHTML=xmlhttp.responseText; //MOSTRAMOS LOS DATOS EN EL DIV CON ID CUERPO
-			if(xmlhttp.responseText=="Correcto"){
-				alert("Bienvenido(a) al Sistema");
-				window.location="administrador.php"
-				
-			}
 		}
 	}
 );
 }
 			//------------------------------------------------------------------
-function recibe(){		//FUNCION QUE SE EJECUTA CUANDO PRESIONAMOS EL BOTON ENVIAR
+function recibe(opc){		//FUNCION QUE SE EJECUTA CUANDO PRESIONAMOS EL BOTON ENVIAR
 		var dato = document.getElementById('user').value;//OBTENEMOS LOS DATOS DEL CAMPO DE TEXTO
-		var dato2= document.getElementById('pass').value;//OBTENEMOS LOS DATOS DEL CAMPO DE TEXTO
-		metodoAjax("valor="+dato+"&valor2="+dato2,"mod_usuarios/validar.php") //EJECUTAMOS EL METODO AJAX Y LE PSASMOS LOS DATOS, Y LE DECIMOS QUE ARCHIVO ES EL QUE RECIBE LOS DATOS
+		metodoAjax("valor="+dato,"mod_usuarios/validar.php"); //EJECUTAMOS EL METODO AJAX Y LE PSASMOS LOS DATOS, Y LE DECIMOS QUE ARCHIVO ES EL QUE RECIBE LOS DATOS	
 }
